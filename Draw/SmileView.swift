@@ -28,11 +28,14 @@ class SmileView: UIView {
         }
     }
     
+    @IBInspectable var noseColor:UIColor = UIColor.redColor()
     
     override func drawRect(rect: CGRect) {
         
         drawBackground(rect)
         drawEyes(rect)
+        drawNose(rect)
+        drawMouth(rect)
     
     }
     
@@ -54,7 +57,99 @@ class SmileView: UIView {
 
     func drawEyes(rect:CGRect) {
         
+        var betweenEyesPoint = CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect))
+        
+        betweenEyesPoint.y -= CGRectGetHeight(rect) / 6.0
+        
+        let eyeShft = CGRectGetWidth(rect) / 5.5
+        
+        
+        let leftEyePoint = CGPointMake(betweenEyesPoint.x - eyeShft
+, betweenEyesPoint.y)
+        let rightEyePoint = CGPointMake(betweenEyesPoint.x + eyeShft, betweenEyesPoint.y)
+        
+        drawEyeIn(leftEyePoint)
+        drawEyeIn(rightEyePoint)
+        
     }
     
+    func drawEyeIn(point:CGPoint){
+        let eyeSize = CGRectGetWidth(bounds) / 12
+        
+        conturLineColor.setStroke()
+        UIColor.whiteColor().setFill()
+        
+        let eyePath = UIBezierPath(arcCenter: point,
+            radius: eyeSize,
+            startAngle: 0,
+            endAngle: CGFloat(2.0 * M_PI ),
+            clockwise: true)
+        eyePath.lineWidth = conturLineWidth
+        
+        eyePath.fill()
+        eyePath.stroke()
+        
+    }
+    
+    func drawNose(rect:CGRect){
+        
+        let path = UIBezierPath()
+        
+        let noseWidth = CGRectGetWidth(rect) / 10
+        
+        var noseStart = CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect))
+        noseStart.y   = noseStart.y - noseWidth / 2
+        
+        var leftNosePoint = noseStart
+        leftNosePoint.x = leftNosePoint.x - noseWidth / 2
+        leftNosePoint.y = leftNosePoint.y + noseWidth
+        
+        var rightNosePoint = leftNosePoint
+        rightNosePoint.x = rightNosePoint.x + noseWidth
+        
+        path.moveToPoint(noseStart)
+        path.addLineToPoint(leftNosePoint)
+        path.addLineToPoint(rightNosePoint)
+        path.closePath()
+        
+        conturLineColor.setStroke()
+        noseColor.setFill()
+        
+        path.lineWidth = conturLineWidth
+        
+        path.fill()
+        path.stroke()
+    }
+    
+    func drawMouth(rect:CGRect){
+        
+        var mouthSymetricPoint = CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect))
+        
+        let mouthWidth = CGRectGetWidth(rect) / 4
+        mouthSymetricPoint.y = mouthSymetricPoint.y + mouthWidth
+        
+        var leftPoint = mouthSymetricPoint
+        leftPoint.x   = leftPoint.x - mouthWidth / 2
+        
+        var rightPoint = leftPoint
+        rightPoint.x = rightPoint.x + mouthWidth
+        
+        
+        var controlPoint = mouthSymetricPoint
+        controlPoint.y = controlPoint.y + mouthWidth / 2
+        
+        let path = UIBezierPath()
+        
+        path.lineWidth = conturLineWidth
+        path.moveToPoint(leftPoint)
+        path.addQuadCurveToPoint(rightPoint, controlPoint: controlPoint)
+        path.closePath()
+        
+        UIColor.whiteColor().setFill()
+        
+        path.fill()
+        path.stroke()
+        
+    }
     
 }
