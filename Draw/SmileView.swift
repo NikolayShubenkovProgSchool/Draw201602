@@ -105,6 +105,7 @@ class SmileView: UIView {
     func drawNose(rect:CGRect){
         
         let path = UIBezierPath()
+        path.lineJoinStyle = .Round
         
         let noseWidth = CGRectGetWidth(rect) / 10
         
@@ -153,6 +154,9 @@ class SmileView: UIView {
         
         let path = UIBezierPath()
         
+        path.lineJoinStyle = .Round
+        path.lineCapStyle  = .Round
+
         path.lineWidth = conturLineWidth
         path.moveToPoint(leftPoint)
         path.addQuadCurveToPoint(rightPoint, controlPoint: controlPoint)

@@ -37,7 +37,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZB7-HR-vcx">
                                 <rect key="frame" x="101" y="346" width="118" height="31"/>
                                 <connections>
-                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="HB1-3J-RQr"/>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="rQ3-r7-EiG"/>
                                 </connections>
                             </slider>
                         </subviews>
