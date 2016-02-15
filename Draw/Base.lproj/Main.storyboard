@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Item-->
@@ -109,6 +110,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="IhK-an-DZC" kind="relationship" relationship="viewControllers" id="P4G-uo-voh"/>
+                        <segue destination="LUh-Pa-nJR" kind="relationship" relationship="viewControllers" id="hms-qZ-sgD"/>
                         <segue destination="bpS-B1-7b0" kind="relationship" relationship="viewControllers" id="iaZ-sa-oS2"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="XG5-lm-kaa"/>
                     </connections>
@@ -116,6 +119,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QI9-jH-7Xu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="650" y="335"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="PA8-yT-n1L">
+            <objects>
+                <viewController id="IhK-an-DZC" customClass="LoveViewController" customModule="Draw" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2IB-Dp-tOb"/>
+                        <viewControllerLayoutGuide type="bottom" id="CLC-c7-LBt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lKA-sJ-pvp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="JM7-JU-fC3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mf4-Ne-9zH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="453" y="1007"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="BZr-00-G5e">
+            <objects>
+                <viewController id="LUh-Pa-nJR" customClass="LayerViewController" customModule="Draw" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K9N-4F-ars"/>
+                        <viewControllerLayoutGuide type="bottom" id="A9E-yH-BVE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GJT-K3-dlj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5m-c8-T9a">
+                                <rect key="frame" x="20" y="28" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="t5m-c8-T9a" secondAttribute="trailing" constant="44" id="7Hk-xp-TiR"/>
+                            <constraint firstItem="t5m-c8-T9a" firstAttribute="leading" secondItem="GJT-K3-dlj" secondAttribute="leadingMargin" constant="4" id="CdQ-I7-xau"/>
+                            <constraint firstItem="A9E-yH-BVE" firstAttribute="top" secondItem="t5m-c8-T9a" secondAttribute="bottom" constant="275" id="jN0-8u-paq"/>
+                            <constraint firstItem="t5m-c8-T9a" firstAttribute="top" secondItem="K9N-4F-ars" secondAttribute="bottom" constant="8" symbolic="YES" id="rDg-ni-q71"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="YcT-Qm-V1B"/>
+                    <connections>
+                        <outlet property="testView" destination="t5m-c8-T9a" id="jmp-iH-C4e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QOI-g7-qH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884" y="1007"/>
         </scene>
     </scenes>
 </document>

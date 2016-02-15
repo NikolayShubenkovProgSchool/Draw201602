@@ -14,6 +14,8 @@
 		4F72D0E81C6D003200FB308B /* SmileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72D0E71C6D003200FB308B /* SmileView.swift */; };
 		4F72D0EA1C6D105100FB308B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72D0E91C6D105100FB308B /* ViewController.swift */; };
 		4F8CE4AF1C7235DD002C69CD /* CreateImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8CE4AE1C7235DD002C69CD /* CreateImageViewController.swift */; };
+		4FE048A51C724ECD002E13A6 /* LayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE048A41C724ECD002E13A6 /* LayerViewController.swift */; };
+		4FE048A71C72524D002E13A6 /* LoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE048A61C72524D002E13A6 /* LoveViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +26,10 @@
 		4F72D0DF1C6CFF3400FB308B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F72D0E11C6CFF3400FB308B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F72D0E71C6D003200FB308B /* SmileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmileView.swift; sourceTree = "<group>"; };
-		4F72D0E91C6D105100FB308B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4F8CE4AE1C7235DD002C69CD /* CreateImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateImageViewController.swift; sourceTree = "<group>"; };
+		4F72D0E91C6D105100FB308B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		4F8CE4AE1C7235DD002C69CD /* CreateImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateImageViewController.swift; path = ../CreateImageViewController.swift; sourceTree = "<group>"; };
+		4FE048A41C724ECD002E13A6 /* LayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerViewController.swift; sourceTree = "<group>"; };
+		4FE048A61C72524D002E13A6 /* LoveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoveViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,8 +46,6 @@
 		4F72D0C91C6CFF3400FB308B = {
 			isa = PBXGroup;
 			children = (
-				4F8CE4AE1C7235DD002C69CD /* CreateImageViewController.swift */,
-				4F72D0E91C6D105100FB308B /* ViewController.swift */,
 				4F72D0D41C6CFF3400FB308B /* Draw */,
 				4F72D0D31C6CFF3400FB308B /* Products */,
 			);
@@ -60,8 +62,12 @@
 		4F72D0D41C6CFF3400FB308B /* Draw */ = {
 			isa = PBXGroup;
 			children = (
+				4F8CE4AE1C7235DD002C69CD /* CreateImageViewController.swift */,
+				4F72D0E91C6D105100FB308B /* ViewController.swift */,
 				4F72D0D51C6CFF3400FB308B /* AppDelegate.swift */,
 				4F72D0D91C6CFF3400FB308B /* Main.storyboard */,
+				4FE048A41C724ECD002E13A6 /* LayerViewController.swift */,
+				4FE048A61C72524D002E13A6 /* LoveViewController.swift */,
 				4F72D0E71C6D003200FB308B /* SmileView.swift */,
 				4F72D0DC1C6CFF3400FB308B /* Assets.xcassets */,
 				4F72D0DE1C6CFF3400FB308B /* LaunchScreen.storyboard */,
@@ -141,7 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FE048A51C724ECD002E13A6 /* LayerViewController.swift in Sources */,
 				4F8CE4AF1C7235DD002C69CD /* CreateImageViewController.swift in Sources */,
+				4FE048A71C72524D002E13A6 /* LoveViewController.swift in Sources */,
 				4F72D0EA1C6D105100FB308B /* ViewController.swift in Sources */,
 				4F72D0D61C6CFF3400FB308B /* AppDelegate.swift in Sources */,
 				4F72D0E81C6D003200FB308B /* SmileView.swift in Sources */,
