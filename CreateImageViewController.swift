@@ -30,6 +30,7 @@ class CreateImageViewController: UIViewController {
         
         drawGradientOfSize(imageView.frame.size, context: context)
         
+        drawRadialGradientOfSize(imageView.frame.size, context: context)
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
         
@@ -38,9 +39,7 @@ class CreateImageViewController: UIViewController {
         return image
     }
     
-    
     func drawGradientOfSize(size:CGSize, context:CGContextRef){
-        
         
         let colors = [
             UIColor.redColor().CGColor,
@@ -60,6 +59,34 @@ class CreateImageViewController: UIViewController {
         
         CGContextDrawLinearGradient(context,
             gradient, startPoint, finishPoint, [])
+        
+        
+    }
+    
+    
+    func drawRadialGradientOfSize(size:CGSize,context:CGContextRef){
+        
+        let clipPath = UIBezierPath(roundedRect: CGRectMake(40, 40, size.width/2, size.width/1.5), byRoundingCorners: [.BottomLeft,.TopLeft], cornerRadii:CGSizeMake(10, 10))
+        
+        clipPath.addClip()
+        
+        let colors = [
+            UIColor.blackColor().CGColor,
+            UIColor.whiteColor().CGColor,
+            UIColor.purpleColor().CGColor,
+            UIColor.greenColor().CGColor
+        ]
+        
+        let positions:[CGFloat]  = [0.2, 0.4, 0.6, 0.9]
+        let startPoint = CGPointMake(40, 40)
+        let finishPoint = CGPointMake(60, 60)
+        
+        
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        
+        let gradient = CGGradientCreateWithColors(colorSpace, colors, positions)
+        
+        CGContextDrawRadialGradient(context, gradient, startPoint, 80, finishPoint, 10, [])
         
         
     }
