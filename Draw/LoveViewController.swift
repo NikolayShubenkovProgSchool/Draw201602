@@ -22,13 +22,11 @@ class LoveViewController: UIViewController {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         emitterLayer?.beginTime = CACurrentMediaTime()
         emitterLayer?.lifetime  = 1
-        
     }
     
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         emitterLayer?.emitterPosition = touches.first!.locationInView(view)
-        
         emitterLayer?.renderMode = kCAEmitterLayerAdditive
     }
     
